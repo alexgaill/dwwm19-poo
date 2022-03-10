@@ -1,4 +1,5 @@
 <?php
+namespace src\Revisions;
 
 /**
  * Une class peut étendre (extends) d'une autre class.

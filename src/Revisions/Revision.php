@@ -1,4 +1,5 @@
 <?php
+namespace src\Revisions;
 
 /**
  * Une class est généralement dans un fichier qui porte le même nom et commence toujours par une majuscule.
