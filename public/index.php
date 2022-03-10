@@ -1,5 +1,6 @@
 <?php
 
+use src\Controller\CategorieController;
 use src\Personnes\PersonneMorale;
 use src\Revisions\Revision;
 
@@ -33,13 +34,18 @@ use src\Revisions\Revision;
 // echo $rev2->prop1;
 // echo "<br>";
 
+// __DIR__ est une constante magique qui récupère le nom du dossier qui contient index.php donc public
+// dirname() récupère le chemin du dossier parent de la valeur qu'il a entre parenthèse.
+// dirname(__DIR__) correspond donc à dirname("public") donc le chemin du parent du dossier public soit "POO"
 define("ROOT", dirname(__DIR__));
 require ROOT . "/core/Autoloader/Autoload.php";
-$autoloader = new Autoload;
-$autoloader->register();
+Autoload::register();
 
-$personne = new PersonneMorale;
-var_dump($personne);
+// $personne = new PersonneMorale;
+// var_dump($personne);
 
-$revision = new Revision("Alex", 'Alex');
-var_dump($revision);
+// $revision = new Revision("Alex", 'Alex');
+// var_dump($revision);
+
+$controller = new CategorieController;
+$controller->accueil();
